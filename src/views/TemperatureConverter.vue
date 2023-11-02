@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1 class="text-3xl font-bold">Temperature Converter</h1>
-        <div class="flex items-center gap-2 mt-4">
+        <div class="flex items-center gap-2 mt-8">
             <div>
                 <label class="text-base block text-center">Celsius</label>
                 <input type="number" class="border border-gray-300 rounded p-2 w-52 h-20 flex items-center text-center text-3xl" :value="celsius" @input="setCelsius" />

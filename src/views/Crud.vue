@@ -1,6 +1,6 @@
 <template>
-    <div class="p-4">
-        <h1 class="text-3xl font-bold">CRUD</h1>
+    <h1 class="text-3xl font-bold">CRUD</h1>
+    <div class="py-4">
         <div class="mt-4">
             <input v-model="filtro" class="w-full p-2 rounded border" placeholder="Filtro">
         </div>
