@@ -1,8 +1,8 @@
 <template>
     <div class="grid grid-cols-[15rem,1fr]">
-        <h2>Menu Lateral</h2>
+        <MenuLateral />
         <main class="max-w-full flex-1 bg-[#F5F5F5]">
-            <p>Topo</p>
+            <AppBar />
             <div class="p-8">
                 <p>conteúdo</p>
                 <router-view />
@@ -12,5 +12,6 @@
 </template>
 
 <script setup>
-
+import AppBar from '../components/Navegacao/AppBar.vue';
+import MenuLateral from '../components/Navegacao/MenuLateral.vue'
 </script>
