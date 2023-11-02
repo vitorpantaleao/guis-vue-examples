@@ -22,6 +22,12 @@
                     <span>Flight Booker</span>
                 </div>
             </RouterLink>
+            <RouterLink :to="{ name: 'Timer' }" class="primary flex items-center justify-between gap-2 p-2 hover:bg-[#666666] rounded">
+                <div class="flex items-center gap-2">
+                    <TimerIcon />
+                    <span>Timer</span>
+                </div>
+            </RouterLink>
         </div>
     </div>
 </template>
@@ -30,6 +36,7 @@
 import CounterIcon from '../Icons/CounterIcon.vue'
 import ConverterIcon from '../Icons/ConverterIcon.vue'
 import FlightBookerIcon from '../Icons/FlightBookerIcon.vue'
+import TimerIcon from '../Icons/TimerIcon.vue'
 </script>
 
 <style scoped>

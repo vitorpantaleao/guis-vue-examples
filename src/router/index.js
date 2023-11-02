@@ -39,6 +39,14 @@ const routes = [
                 }
             },
             {
+                path: '/timer',
+                name: 'Timer',
+                component: () => import(/* webpackChunkName: "Timer" */ '@/views/Timer'),
+                meta: {
+                    title: 'Timer',
+                }
+            },
+            {
                 path: '/:pathMatch(.*)*',
                 name: 'NotFound',
                 component: () => import('@/views/NotFound.vue'),
