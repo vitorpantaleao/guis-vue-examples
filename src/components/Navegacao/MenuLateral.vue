@@ -10,12 +10,19 @@
                     <span>Counter</span>
                 </div>
             </RouterLink>
+            <RouterLink to="/temperature-converter" class="primary flex items-center justify-between gap-2 p-2 hover:bg-[#666666] rounded">
+                <div class="flex items-center gap-2">
+                    <ConverterIcon />
+                    <span>Temperature Converter</span>
+                </div>
+            </RouterLink>
         </div>
     </div>
 </template>
 
 <script setup>
 import CounterIcon from '../Icons/CounterIcon.vue'
+import ConverterIcon from '../Icons/ConverterIcon.vue'
 </script>
 
 <style scoped>

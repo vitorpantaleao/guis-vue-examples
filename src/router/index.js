@@ -22,6 +22,14 @@ const routes = [
                     title: 'Counter',
                 }
             },
+            {
+                path: '/temperature-converter',
+                name: 'TemperatureConverter',
+                component: () => import(/* webpackChunkName: "TemperatureConverter" */ '@/views/TemperatureConverter.vue'),
+                meta: {
+                    title: 'Temperature Converter',
+                }
+            },
         ],
     },
 ]
