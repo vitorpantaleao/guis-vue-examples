@@ -47,6 +47,14 @@ const routes = [
                 }
             },
             {
+                path: '/crud',
+                name: 'Crud',
+                component: () => import(/* webpackChunkName: "Crud" */ '@/views/Crud'),
+                meta: {
+                    title: 'CRUD',
+                }
+            },
+            {
                 path: '/:pathMatch(.*)*',
                 name: 'NotFound',
                 component: () => import('@/views/NotFound.vue'),
