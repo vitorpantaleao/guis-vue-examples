@@ -55,6 +55,14 @@ const routes = [
                 }
             },
             {
+                path: '/circle-drawer',
+                name: 'CircleDrawer',
+                component: () => import(/* webpackChunkName: "CircleDrawer" */ '@/views/CircleDrawer'),
+                meta: {
+                    title: 'Circle Drawer',
+                }
+            },
+            {
                 path: '/:pathMatch(.*)*',
                 name: 'NotFound',
                 component: () => import('@/views/NotFound.vue'),
