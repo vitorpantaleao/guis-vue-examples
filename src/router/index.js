@@ -63,6 +63,14 @@ const routes = [
                 }
             },
             {
+                path: '/cells',
+                name: 'Cells',
+                component: () => import(/* webpackChunkName: "Cells" */ '@/views/Cells'),
+                meta: {
+                    title: 'Cells',
+                }
+            },
+            {
                 path: '/:pathMatch(.*)*',
                 name: 'NotFound',
                 component: () => import('@/views/NotFound.vue'),

@@ -40,6 +40,12 @@
                     <span>Circle Drawer</span>
                 </div>
             </RouterLink>
+            <RouterLink to="/cells" class="primary flex items-center justify-between gap-2 p-2 hover:bg-[#666666] rounded">
+                <div class="flex items-center gap-2">
+                    <CellsIcon />
+                    <span>Cells</span>
+                </div>
+            </RouterLink>
         </div>
     </div>
 </template>
@@ -51,6 +57,7 @@ import FlightBookerIcon from '../Icons/FlightBookerIcon.vue'
 import TimerIcon from '../Icons/TimerIcon.vue'
 import CrudIcon from '../Icons/CrudIcon.vue'
 import CircleDrawerIcon from '../Icons/CircleDrawerIcon.vue'
+import CellsIcon from '../Icons/CellsIcon.vue'
 </script>
 
 <style scoped>
