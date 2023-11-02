@@ -1,24 +1,23 @@
 <template>
     <div>
         <h1 class="text-3xl font-bold">Temperature Converter</h1>
-        <div class="flex items-end gap-2 mt-4">
+        <div class="flex items-center gap-2 mt-4">
             <div>
-                <label class="text-sm block">Graus Celsius</label>
-                <input type="number" class="border border-gray-300 rounded px-4 py-2" :value="celsius" @input="setCelsius" />
+                <label class="text-base block text-center">Celsius</label>
+                <input type="number" class="border border-gray-300 rounded p-2 w-52 h-20 flex items-center text-center text-3xl" :value="celsius" @input="setCelsius" />
             </div>
-            <!-- <p class="text-xl font-bold">Celsius</p> -->
-            <span class="text-3xl font-bold">=</span>
+            <span class="text-3xl font-bold block pt-4">=</span>
             <div>
-                <label class="text-sm block">Graus Fahrenheit</label>
-                <input type="number" class="border border-gray-300 rounded px-4 py-2" :value="fahrenheit" @input="setFahrenheit" />
+                <label class="text-base block text-center">Fahrenheit</label>
+                <input type="number" class="border border-gray-300 rounded p-2 w-52 h-20 flex items-center text-center text-3xl" :value="fahrenheit" @input="setFahrenheit" />
             </div>
-            <!-- <p class="text-xl font-bold">Fahrenheit</p> -->
         </div>
+        <button class="mt-4 bg-primary-color hover:bg-secondary-color text-white font-bold py-2 px-4 rounded" @click="celsius = 0; fahrenheit = 32">Reset</button>
     </div>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 
 const celsius = ref(0)
 const fahrenheit = ref(32)
