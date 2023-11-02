@@ -4,7 +4,6 @@
         <main class="max-w-full flex-1 bg-[#F5F5F5]">
             <AppBar />
             <div class="p-8">
-                <p>conteúdo</p>
                 <router-view />
             </div>
         </main>

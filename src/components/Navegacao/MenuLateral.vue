@@ -4,10 +4,10 @@
             <RouterLink to="/">MENU</RouterLink> 
         </div>
         <div class="flex flex-col gap-2 mt-4 px-3 tracking-tight aside-menu">
-            <RouterLink to="/" class="primary flex items-center justify-between gap-2 p-2 hover:bg-[#666666] rounded">
+            <RouterLink to="/counter" class="primary flex items-center justify-between gap-2 p-2 hover:bg-[#666666] rounded">
                 <div class="flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8z"/></svg>
-                    <span>Home</span>
+                    <CounterIcon />
+                    <span>Counter</span>
                 </div>
             </RouterLink>
         </div>
@@ -15,5 +15,11 @@
 </template>
 
 <script setup>
-
+import CounterIcon from '../Icons/CounterIcon.vue'
 </script>
+
+<style scoped>
+    .router-link-exact-active.primary {
+        background-color: #666666;
+    }
+</style>
