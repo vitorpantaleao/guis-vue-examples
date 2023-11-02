@@ -30,6 +30,22 @@ const routes = [
                     title: 'Temperature Converter',
                 }
             },
+            {
+                path: '/flight-booker',
+                name: 'FlightBooker',
+                component: () => import(/* webpackChunkName: "FlightBooker" */ '@/views/FlightBooker'),
+                meta: {
+                    title: 'Flight Booker',
+                }
+            },
+            {
+                path: '/:pathMatch(.*)*',
+                name: 'NotFound',
+                component: () => import('@/views/NotFound.vue'),
+                meta: {
+                    title: 'Not Found',
+                }
+            },
         ],
     },
 ]

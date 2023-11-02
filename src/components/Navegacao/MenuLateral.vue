@@ -16,6 +16,12 @@
                     <span>Temperature Converter</span>
                 </div>
             </RouterLink>
+            <RouterLink :to="{ name: 'FlightBooker' }" class="primary flex items-center justify-between gap-2 p-2 hover:bg-[#666666] rounded">
+                <div class="flex items-center gap-2">
+                    <FlightBookerIcon />
+                    <span>Flight Booker</span>
+                </div>
+            </RouterLink>
         </div>
     </div>
 </template>
@@ -23,6 +29,7 @@
 <script setup>
 import CounterIcon from '../Icons/CounterIcon.vue'
 import ConverterIcon from '../Icons/ConverterIcon.vue'
+import FlightBookerIcon from '../Icons/FlightBookerIcon.vue'
 </script>
 
 <style scoped>
