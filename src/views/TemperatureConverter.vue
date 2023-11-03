@@ -4,15 +4,15 @@
         <div class="flex items-center gap-2 mt-8">
             <div>
                 <label class="text-base block text-center">Celsius</label>
-                <input type="number" class="border border-gray-300 rounded p-2 w-52 h-20 flex items-center text-center text-3xl" :value="celsius" @input="setCelsius" />
+                <input id="celsius" type="number" class="border border-gray-300 rounded p-2 w-52 h-20 flex items-center text-center text-3xl" :value="celsius" @input="setCelsius" />
             </div>
             <span class="text-3xl font-bold block pt-4">=</span>
             <div>
                 <label class="text-base block text-center">Fahrenheit</label>
-                <input type="number" class="border border-gray-300 rounded p-2 w-52 h-20 flex items-center text-center text-3xl" :value="fahrenheit" @input="setFahrenheit" />
+                <input id="fahrenheit" type="number" class="border border-gray-300 rounded p-2 w-52 h-20 flex items-center text-center text-3xl" :value="fahrenheit" @input="setFahrenheit" />
             </div>
         </div>
-        <button class="mt-4 bg-primary-color hover:bg-secondary-color text-white font-bold py-2 px-4 rounded" @click="celsius = 0; fahrenheit = 32">Reset</button>
+        <button id="reset" class="mt-4 bg-primary-color hover:bg-secondary-color text-white font-bold py-2 px-4 rounded" @click="celsius = 0; fahrenheit = 32">Reset</button>
     </div>
 </template>
 
