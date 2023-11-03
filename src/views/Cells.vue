@@ -10,7 +10,7 @@
             </thead>
             <tbody>
                 <tr v-for="(linha, linhaIndex) in linhasTabela" :key="linhaIndex">
-                    <td class="py-2 px-4 border border-gray-300 bg-slate-100">{{ linhaIndex + 1 }}</td>
+                    <td class="py-2 px-4 border border-gray-300 bg-slate-100 text-center">{{ linhaIndex + 1 }}</td>
                     <td v-for="(celula, colunaIndex) in linha" :key="colunaIndex" class="py-2 px-4 border border-gray-300">
                         <input :value="celula" @input="inputCelulas(linhaIndex, colunaIndex, $event)" class="w-full outline-none" />
                     </td>
