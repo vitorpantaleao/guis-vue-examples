@@ -21,6 +21,12 @@ npm install
 npm run dev
 ```
 
+## Executando os testes
+
+```bash
+npm run test:unit
+```
+
 ## Exemplos citados
 
 ### 1. [Counter](https://vuejs.org/examples/#counter)

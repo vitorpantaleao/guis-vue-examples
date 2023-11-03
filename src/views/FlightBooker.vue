@@ -16,7 +16,7 @@
             </div>
             <div>
                 <label class="text-base block">Data de retorno</label>
-                <input id="dataRetorno" type="date" v-model="dataRetorno"  class="w-44 h-10 flex text-xl px-2">
+                <input id="dataRetorno" type="date" v-model="dataRetorno" :disabled="!isVolta" class="w-44 h-10 flex text-xl px-2">
             </div>
         </div>
         <div v-if="!podeReservar" class="text-red-500 text-sm mt-2">A data de retorno deve ser posterior à data de partida.</div>
