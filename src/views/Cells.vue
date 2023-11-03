@@ -1,5 +1,6 @@
 <template>
     <h1 class="text-3xl font-bold">Cells</h1>
+    <p> Uma tela similar a uma planilha de Excel, onde é possível adicionar e remover linhas e colunas. </p>
     <div class="bg-white rounded shadow p-4 mt-8">
         <table class="w-full border-collapse border border-gray-300">
             <thead>

@@ -1,6 +1,7 @@
 <template>
     <div>
         <h1 class="text-3xl font-bold">Flight Booker</h1>
+        <p> Um simulador de reserva de voos, onde é possível escolher a data de ida e volta. </p>
         <div class="flex items-center gap-5 mt-8">
             <div>
                 <label class="text-base block">Tipo de vôo</label>

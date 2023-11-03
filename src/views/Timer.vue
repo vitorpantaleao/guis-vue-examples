@@ -1,5 +1,6 @@
 <template>
     <h1 class="text-3xl font-bold">Timer</h1>
+    <p>Um cronômetro simples que permite escolher a duração e dar um reset na contagem.</p>
     <div class="bg-gray-200 p-4 rounded-lg max-w-md mt-8">
         <div>
             <label class="block text-base">Tempo decorrido:</label>

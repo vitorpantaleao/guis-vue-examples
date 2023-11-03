@@ -1,6 +1,7 @@
 <template>
     <div>
         <h1 class="text-3xl font-bold">Temperature Converter</h1>
+        <p> Um conversor de temperatura que converte entre Celsius e Fahrenheit. </p>
         <div class="flex items-center gap-2 mt-8">
             <div>
                 <label class="text-base block text-center">Celsius</label>

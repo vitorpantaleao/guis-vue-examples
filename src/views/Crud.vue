@@ -1,5 +1,6 @@
 <template>
     <h1 class="text-3xl font-bold">CRUD</h1>
+    <p> Um tela de cadastro de pessoas, que permite criar, atualizar e excluir nomes de pessoas. </p>
     <div class="py-4">
         <div class="mt-4">
             <input id="filtro" v-model="filtro" class="w-full p-2 rounded border" placeholder="Filtro">
