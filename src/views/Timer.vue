@@ -3,12 +3,12 @@
     <div class="bg-gray-200 p-4 rounded-lg max-w-md mt-8">
         <div>
             <label class="block text-base">Tempo decorrido:</label>
-            <progress class="w-full" :value="progresso" max="1"></progress>
+            <progress id="progresso" class="w-full" :value="progresso" max="1"></progress>
             <div class="text-center">{{ (tempoDecorrido / 1000).toFixed(1) }} segundos</div>
         </div>
         <div class="mt-4">
             <label class="block">Escolha a duração:</label>
-            <input type="range" v-model="duracaoContagem" min="1" max="30000" class="w-full">
+            <input id="duracaoContagem" type="range" v-model="duracaoContagem" min="1" max="30000" class="w-full">
             <div class="text-center">{{ (duracaoContagem / 1000).toFixed(1) }} segundos</div>
         </div>
         <div class="mt-4">
