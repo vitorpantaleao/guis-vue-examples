@@ -5,47 +5,47 @@
             <thead>
                 <tr>
                     <th class="py-2 px-4 font-semibold border border-gray-300 bg-slate-100"></th>
-                    <th v-for="(col, index) in columnData" :key="index" class="py-2 px-4 font-semibold border border-gray-300 bg-slate-100">{{ col }}</th>
+                    <th v-for="(col, index) in colunasTabela" :key="index" class="py-2 px-4 font-semibold border border-gray-300 bg-slate-100">{{ col }}</th>
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="(row, rowIndex) in rowData" :key="rowIndex">
-                    <td class="py-2 px-4 border border-gray-300 bg-slate-100">{{ rowIndex + 1 }}</td>
-                    <td v-for="(cell, colIndex) in row" :key="colIndex" class="py-2 px-4 border border-gray-300">
-                        <input :value="cell" @input="inputHandler(rowIndex, colIndex, $event)" class="w-full outline-none" />
+                <tr v-for="(linha, linhaIndex) in linhasTabela" :key="linhaIndex">
+                    <td class="py-2 px-4 border border-gray-300 bg-slate-100">{{ linhaIndex + 1 }}</td>
+                    <td v-for="(celula, colunaIndex) in linha" :key="colunaIndex" class="py-2 px-4 border border-gray-300">
+                        <input :value="celula" @input="inputCelulas(linhaIndex, colunaIndex, $event)" class="w-full outline-none" />
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <button class="mt-4 bg-primary-color text-white font-semibold py-2 px-4 rounded shadow mr-5" @click="addRow">Adicionar nova linha</button>
-    <button class="mt-4 bg-primary-color text-white font-semibold py-2 px-4 rounded shadow" @click="addColumn">Adicionar nova coluna</button>
+    <button class="mt-4 bg-primary-color text-white font-semibold py-2 px-4 rounded shadow mr-5" @click="adicionaLinha">Adicionar nova linha</button>
+    <button class="mt-4 bg-primary-color text-white font-semibold py-2 px-4 rounded shadow" @click="adicionaColuna">Adicionar nova coluna</button>
 </template>
   
 <script setup>
 import { ref } from "vue";
-const columns = 5;
-const rows = 10;
-const cols = 5;
+const colunas = 5;
+const linhas = 10;
+const celulas = 5;
 
-const columnData = ref(Array.from({ length: columns }, (_, index) => String.fromCharCode(65 + index)));
-const rowData = ref(Array.from({ length: rows }, () => Array(cols).fill("")));
+const colunasTabela = ref(Array.from({ length: colunas }, (_, index) => String.fromCharCode(65 + index)));
+const linhasTabela = ref(Array.from({ length: linhas }, () => Array(celulas).fill("")));
 
-const inputHandler = (rowIndex, colIndex, event) => {
-    rowData.value[rowIndex][colIndex] = event.target.value;
+const inputCelulas = (rowIndex, colIndex, event) => {
+    linhasTabela.value[rowIndex][colIndex] = event.target.value;
 };
 
-const addColumn = () => {
-    columnData.value.push(String.fromCharCode(65 + columnData.value.length));
-    rowData.value.forEach((row) => {
+const adicionaColuna = () => {
+    colunasTabela.value.push(String.fromCharCode(65 + colunasTabela.value.length));
+    linhasTabela.value.forEach((row) => {
         row.push("");
     });
 };
 
-const addRow = () => {
-    rowData.value.push(Array(cols).fill(""));
-    columnData.value.forEach((col, index) => {
-        rowData.value[rowData.value.length - 1][index] = "";
+const adicionaLinha = () => {
+    linhasTabela.value.push(Array(celulas).fill(""));
+    colunasTabela.value.forEach((col, index) => {
+        linhasTabela.value[linhasTabela.value.length - 1][index] = "";
     });
 };
 </script>
